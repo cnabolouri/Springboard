@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>CSS Fundamentals – Conceptual Exercise</title>
+    <style>
+      body {
+        margin: 1em;
+      }
+      .answer {
+        border: solid rgb(0, 0, 0);
+        padding: 1em;
+      }
+    </style>
   </head>
 
   <body>
@@ -12,7 +21,7 @@
   <article>
     <h3>Question 1</h3>
     <p><strong>How does CSS differ from HTML in the context of web development?</strong></p>
-    <p>
+    <p class="answer">
       HTML defines the structure and meaning of content on a webpage, such as headings,
       paragraphs, forms, and images. CSS controls the presentation of that content, including
       layout, colors, fonts, spacing, and responsiveness. In short, HTML is about what the
@@ -23,7 +32,7 @@
   <article>
     <h3>Question 2</h3>
     <p><strong>List the methods of including CSS in an HTML document and briefly describe each.</strong></p>
-    <ul>
+    <ul class="answer">
       <li><strong>External CSS:</strong> Uses a separate `.css` file linked with a `&lt;link&gt;` tag. Best for maintainability and reuse.</li>
       <li><strong>Internal CSS:</strong> Defined inside a `&lt;style&gt;` tag in the document’s `&lt;head&gt;`. Useful for single-page styling.</li>
       <li><strong>Inline CSS:</strong> Applied directly to an element using the `style` attribute. Not recommended for large projects.</li>
@@ -33,7 +42,7 @@
   <article>
     <h3>Question 3</h3>
     <p><strong>Describe the anatomy of a CSS rule.</strong></p>
-    <p>
+    <p class="answer">
       A CSS rule consists of a selector that targets HTML elements and a declaration block
       enclosed in braces. The declaration block contains one or more declarations, each made
       up of a property and a value.
@@ -43,7 +52,7 @@
   <article>
     <h3>Question 4</h3>
     <p><strong>When might you want to use RGBA instead of RGB?</strong></p>
-    <p>
+    <p class="answer">
       RGBA is used when transparency is needed. The additional alpha value allows control
       over opacity, which is useful for overlays, shadows, and layered UI elements.
     </p>
@@ -52,7 +61,7 @@
   <article>
     <h3>Question 5</h3>
     <p><strong>How do Hex color values differ from RGB?</strong></p>
-    <p>
+    <p class="answer">
       Hex colors and RGB represent colors using red, green, and blue components. Hex uses
       hexadecimal notation (e.g. `#ff0000`), while RGB uses decimal values (e.g. `rgb(255, 0, 0)`).
       Both define the same color information in different formats.
@@ -62,7 +71,7 @@
   <article>
     <h3>Question 6</h3>
     <p><strong>When might a developer prefer to use HSL over other color formats?</strong></p>
-    <p>
+    <p class="answer">
       HSL is preferred when adjusting colors intuitively. It separates hue, saturation, and
       lightness, making it easier to create consistent color variations such as lighter or
       darker shades.
@@ -72,7 +81,7 @@
   <article>
     <h3>Question 7</h3>
     <p><strong>What are the primary text properties used in CSS to modify the appearance and layout of text?</strong></p>
-    <p>
+    <p class="answer">
       Common text-related properties include `font-family`, `font-size`, `font-weight`,
       `line-height`, `color`, `text-align`, `text-decoration`, `letter-spacing`,
       `text-transform`, and `white-space`.
@@ -82,7 +91,7 @@
   <article>
     <h3>Question 8</h3>
     <p><strong>In what scenarios might it be beneficial to use <code>vh</code> or <code>vw</code> as a unit for font size?</strong></p>
-    <p>
+    <p class="answer">
       Using `vh` or `vw` is helpful when text should scale relative to the viewport size, such
       as large hero headings or full-screen layouts that need to remain responsive across
       different screen sizes.
@@ -92,7 +101,7 @@
   <article>
     <h3>Question 9</h3>
     <p><strong>Explain the difference between <code>em</code> and <code>rem</code> units.</strong></p>
-    <p>
+    <p class="answer">
       `em` units are relative to the font size of the parent element, which can cause values
       to compound when nested. `rem` units are relative to the root element’s font size,
       making them more predictable and consistent across a page.
@@ -102,7 +111,7 @@
   <article>
     <h3>Question 10</h3>
     <p><strong>If multiple font families are listed in the <code>font-family</code> property, how does the browser decide which one to display?</strong></p>
-    <p>
+    <p class="answer">
       The browser checks the listed fonts from left to right and uses the first available
       font. If none of the specified fonts are available, it falls back to the generic font
       family provided at the end.
