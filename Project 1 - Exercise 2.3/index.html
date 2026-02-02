@@ -456,14 +456,14 @@
       <form action="">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name" placeholder="Type your name" />
-        <br />
+        
         <label for="email">Email:</label>
         <input
           type="email"
           name="email"
           id="email"
           placeholder="Type your email"
-        /><br />
+        />
         <label for="organization">Organization:</label>
         <input
           type="text"
@@ -471,32 +471,29 @@
           id="organization"
           placeholder="Enter your organization"
         />
-        <br />
+        
         <label for="contact_reason">Reason for Contacting Me:</label>
         <select name="contact_reason" id="contact_reason">
           <option value="job_opportunity">Job Opportunity</option>
           <option value="collaboration">Collaboration</option>
           <option value="consultation">Consultation</option>
           <option value="other">Other</option></select
-        ><br />
+        >
         <label for="contact_date">When do you prefer to be contacted?</label
-        ><br />
-        <input type="radio" name="contact_date" id="morning" /><label
-          for="morning"
-          >Morning</label
         >
-        <br />
-        <input type="radio" name="contact_date" id="afternoon" /><label
-          for="afternoon"
-          >Afternoon</label
-        >
-        <br />
-        <input type="radio" name="contact_date" id="evening" /><label
-          for="evening"
-          >Evening</label
-        >
-        <br />
-        <label for="message">Your Message:</label><br />
+        <div class="radio-group">
+          <input type="radio" name="contact_date" id="morning" />
+          <label for="morning">Morning</label>
+
+          <input type="radio" name="contact_date" id="afternoon" />
+          <label for="afternoon">Afternoon</label>
+
+          <input type="radio" name="contact_date" id="evening" />
+          <label for="evening">Evening</label>
+        </div>
+
+
+        <label for="message">Your Message:</label>
         <textarea
           name="message"
           id="message"
@@ -505,9 +502,11 @@
           placeholder="Type your message here..."
         >
         </textarea
-        ><br />
-        <input type="submit" value="Submit" />
-        <input type="reset" value="Clear Form" id="clear" />
+        >
+        <div class="form-actions">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Clear Form" id="clear" />
+        </div>
       </form>
     </section>
     <footer>
