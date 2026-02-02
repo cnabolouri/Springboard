@@ -31,7 +31,7 @@ h1 {
     gap: 20px;
 }
 
-/* Individual project links (card-style) */
+/* Individual project links */
 .project-card {
     display: flex;
     align-items: center;
@@ -79,9 +79,7 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* ============================================================
-   Mobile Optimization
-   ============================================================ */
+/* Mobile Optimization */
 
 @media (max-width: 480px) {
     body {
