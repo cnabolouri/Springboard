@@ -1,11 +1,4 @@
 /* =========================================================
-   Technical Skills Survey Project Part 2
-   Exercise 3 — Creating a Secret Shift Value for Caesar
-   Goal: random integer shiftValue between 3 and 33 (inclusive)
-   Place answers as comments where they appear.
-   ========================================================= */
-
-/* =========================================================
    Step 1 
    Generate a decimal number between 0 (inclusive) and 1 (exclusive)
    using JavaScript's Math functions.
@@ -25,7 +18,7 @@ const range = maxShift - minShift + 1; // 31 possible integer values
    Why did we add 1 to the difference between 33 and 3?
 */
 /*
-Answer 🔑:
+Answer:
 Because the range is inclusive of both endpoints.
 Count of integers from 3 to 33 inclusive is:
 (maxShift - minShift + 1) = (33 - 3 + 1) = 31
