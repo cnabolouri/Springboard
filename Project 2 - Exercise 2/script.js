@@ -63,5 +63,7 @@ const encryptedLetter = alphabet[wrappedIndex];                 // "e"
 const encryptedMessage = "EUXXWV";
 const teaser = encryptedMessage.slice(0, 3); // "EUX"
 
+
 // For verification
 console.log({ alphabet, firstLetter, firstIndex, encryptedLetterNoWrap, encryptedLetter, alphabetLength, teaser });
+alert("Check out the console for output!");
