@@ -1,4 +1,4 @@
-/*
+/* PSEUDOCODE FOR FIZZBUZZ
     FUNCTION fizzBuzz(n)
 
     IF n is not a positive integer OR n >= 100
@@ -36,7 +36,7 @@ function fizzBuzz(n) {
   }
 }
 
-/*
+/*  PSEUDOCODE FOR LETTER OCCURRENCE
     FUNCTION letterOccurrence(word)
 
     IF word is not a string OR contains non-letters
@@ -78,3 +78,8 @@ function letterOccurrence(word) {
     console.log(letter + " : " + counts[letter]);
   }
 }
+let n = Math.floor(Math.random() * 100); // Random number between 1 and 99
+fizzBuzz(n); // Example usage
+letterOccurrence("HelloWorld"); // Example usage
+
+alert("Check out the console for output!");
