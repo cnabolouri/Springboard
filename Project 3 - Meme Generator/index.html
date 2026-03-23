@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+
+    <main class="page">
+      <header class="hero">
+        <h1>Meme Generator</h1>
+        <p>
+          Create custom memes with top text, bottom text, and any image URL.
+        </p>
+      </header>
+
+      <section class="form-section">
+        <form id="meme-form" novalidate>
+          <div class="form-group">
+            <label for="image-url">Image URL</label>
+            <input
+              type="url"
+              id="image-url"
+              name="imageUrl"
+              placeholder="https://example.com/meme.jpg"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="top-text">Top Text</label>
+            <input
+              type="text"
+              id="top-text"
+              name="topText"
+              placeholder="Enter top text"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="bottom-text">Bottom Text</label>
+            <input
+              type="text"
+              id="bottom-text"
+              name="bottomText"
+              placeholder="Enter bottom text"
+            />
+          </div>
+
+          <button type="submit" class="submit-btn">Generate Meme</button>
+        </form>
+      </section>
+
+      <section class="gallery-section">
+        <div class="gallery-header">
+          <h2>Your Memes</h2>
+          <div class="gallery-actions">
+            <span id="meme-count" class="meme-count">0 memes</span>
+            <button id="clear-all-btn" class="clear-btn" type="button">
+              Clear All
+            </button>
+          </div>
+        </div>
+
+        <p id="empty-state" class="empty-state">
+          No memes yet. Create your first one.
+        </p>
+        <div id="meme-gallery" class="meme-gallery"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

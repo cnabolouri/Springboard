@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>
-      This is where you'll find all the cool projects I tackled during the
-      Springboard software developer bootcamp. Check them out to see what I've
-      been working on!
-    </h1>
-    <div class="projects">
+    <h1>Springboard Projects</h1>
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Search projects..."
+      class="search-bar"
+    />
+
+    <h2 class="section-title">Project 1</h2>
+    <div class="projects" data-category="p1">
       <a
         href="https://cnabolouri.github.io/Springboard/Project%201%20-%20Exercise%201.1"
         class="project-card"
@@ -75,7 +80,10 @@
       >
         <h2>Project 1 - Final</h2>
       </a>
+    </div>
 
+    <h2 class="section-title">Project 2</h2>
+    <div class="projects" data-category="p2">
       <a
         href="https://cnabolouri.github.io/Springboard/Project%202%20-%20Exercise%202"
         class="project-card"
@@ -113,12 +121,6 @@
         <h2>Project 2 - Exercise 7</h2>
       </a>
       <a
-        href="https://cnabolouri.github.io/Springboard/Problem%20Solving%20-%20Practice"
-        class="project-card"
-      >
-        <h2>Problem Solving - Practice</h2>
-      </a>
-      <a
         href="https://cnabolouri.github.io/Springboard/Project%202%20-%20Exercise%208"
         class="project-card"
       >
@@ -129,6 +131,26 @@
         class="project-card"
       >
         <h2>Project 2 - Helping Caesar's Traditional Secret Party</h2>
+      </a>
+    </div>
+
+    <h2 class="section-title">Project 3</h2>
+    <div class="projects" data-category="p3">
+      <a
+        href="https://cnabolouri.github.io/Springboard/Project%203%20-%20Meme%20Generator"
+        class="project-card"
+      >
+        <h2>Project 3 - Meme Generator</h2>
+      </a>
+    </div>
+
+    <h2 class="section-title">Other Work</h2>
+    <div class="projects" data-category="other">
+      <a
+        href="https://cnabolouri.github.io/Springboard/Problem%20Solving%20-%20Practice"
+        class="project-card"
+      >
+        <h2>Problem Solving - Practice</h2>
       </a>
       <a
         href="https://cnabolouri.github.io/Springboard/DOM%20Manipulation%20Exercise"
@@ -144,4 +166,17 @@
       </a>
     </div>
   </body>
+  <script>
+    const searchInput = document.getElementById("search");
+    const cards = document.querySelectorAll(".project-card");
+
+    searchInput.addEventListener("input", function () {
+      const value = this.value.toLowerCase();
+
+      cards.forEach((card) => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(value) ? "flex" : "none";
+      });
+    });
+  </script>
 </html>

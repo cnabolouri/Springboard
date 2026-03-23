@@ -4,98 +4,162 @@
    ============================================================ */
 
 body {
-    margin: 0;
-    padding: 24px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    background: linear-gradient(135deg, #0b1220, #101a2f);
-    color: #e6edf7;
+  margin: 0;
+  padding: 24px;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  background: linear-gradient(135deg, #0b1220, #101a2f);
+  color: #e6edf7;
 }
 
 /* Page title */
 h1 {
-    max-width: 900px;
-    margin: 0 auto 32px auto;
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
 }
 
 /* Grid container for projects */
 .projects {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
 /* Individual project links */
 .project-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    min-height: 90px;
-    padding: 18px;
+  min-height: 90px;
+  padding: 18px;
 
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
 
-    color: #e6edf7;
-    text-decoration: none;
+  color: #e6edf7;
+  text-decoration: none;
 
-    /* Animation & interaction */
-    transition:
-        transform 200ms ease,
-        box-shadow 200ms ease,
-        background 200ms ease,
-        border-color 200ms ease;
+  /* Animation & interaction */
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease,
+    border-color 200ms ease;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* Project title */
 .project-card h2 {
-    margin: 0;
-    font-size: 1.05rem;
-    text-align: center;
-    letter-spacing: 0.3px;
+  margin: 0;
+  font-size: 1.05rem;
+  text-align: center;
+  letter-spacing: 0.3px;
 }
 
 /* Hover / focus state */
 .project-card:hover,
 .project-card:focus-visible {
-    transform: translateY(-6px);
-    background: rgba(56, 189, 248, 0.15);
-    border-color: rgba(56, 189, 248, 0.6);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-6px);
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
 /* Click feedback */
 .project-card:active {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* Mobile Optimization */
 
 @media (max-width: 480px) {
-    body {
-        padding: 16px;
-    }
+  body {
+    padding: 16px;
+  }
 
-    h1 {
-        font-size: 1.35rem;
-    }
+  h1 {
+    font-size: 1.35rem;
+  }
 
-    .project-card {
-        min-height: 80px;
-        padding: 14px;
-    }
+  .project-card {
+    min-height: 80px;
+    padding: 14px;
+  }
 
-    .project-card h2 {
-        font-size: 1rem;
-    }
+  .project-card h2 {
+    font-size: 1rem;
+  }
+}
+
+/* ============================
+   Search Bar
+============================ */
+.search-bar {
+  display: block;
+  width: min(500px, 100%);
+  margin: 0 auto 30px;
+  padding: 12px 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.05);
+  color: #e6edf7;
+
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+/* 
+   Section Titles
+ */
+.section-title {
+  max-width: 1000px;
+  margin: 40px auto 12px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 
+   Make cards lighter
+ */
+.project-card {
+  min-height: 70px; /* smaller */
+  padding: 14px;
+}
+
+/* Reduce text heaviness */
+.project-card h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* 
+   Highlight important project
+ */
+.project-card.featured {
+  border: 1px solid rgba(56, 189, 248, 0.8);
+  background: rgba(56, 189, 248, 0.12);
 }
