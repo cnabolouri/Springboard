@@ -4,7 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Space Mission Control</title>
-    <script src="space-mission-control.js"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="mission-page">
+      <section class="mission-panel">
+        <h1>Space Mission Control</h1>
+        <p class="subtitle">Async JavaScript mission simulation dashboard</p>
+
+        <div class="status-grid">
+          <div class="status-card">
+            <h2>Mission Status</h2>
+            <p id="mission-status">Awaiting launch command...</p>
+          </div>
+
+          <div class="status-card">
+            <h2>Monitoring</h2>
+            <p id="monitoring-status">Offline</p>
+          </div>
+
+          <div class="status-card">
+            <h2>Countdown</h2>
+            <p id="countdown-display">--</p>
+          </div>
+        </div>
+
+        <div class="rocket-area">
+          <div class="launch-pad"></div>
+
+          <div id="rocket" class="rocket">
+            <div class="rocket-top"></div>
+            <div class="rocket-body">
+              <div class="window"></div>
+            </div>
+            <div class="rocket-fin left-fin"></div>
+            <div class="rocket-fin right-fin"></div>
+            <div id="flame" class="flame hidden"></div>
+          </div>
+
+          <div id="smoke" class="smoke hidden"></div>
+        </div>
+
+        <div class="actions">
+          <button id="launch-btn">Launch Mission</button>
+        </div>
+
+        <section class="log-panel">
+          <h2>Mission Log</h2>
+          <ul id="mission-log"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="space-mission-control.js"></script>
+  </body>
 </html>
