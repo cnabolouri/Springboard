@@ -115,22 +115,127 @@
       </section>
 
       <section id="practice-tab" class="tab-panel">
-        <div class="placeholder-card">
-          <h2>Practice Mode</h2>
-          <p>
-            This is where your next game mode will live. Great fit for your
-            other JS games or an Open Trivia training mode.
-          </p>
+        <div class="panel-header">
+          <div>
+            <h2>Practice Lab</h2>
+            <p>Train one clue at a time and improve accuracy.</p>
+          </div>
+        </div>
+
+        <div class="practice-layout">
+          <div class="practice-card">
+            <div class="practice-toolbar">
+              <label for="practice-difficulty">Difficulty</label>
+              <select id="practice-difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+
+              <button id="practice-start" class="primary-btn">
+                Start Practice
+              </button>
+            </div>
+
+            <div id="practice-question" class="practice-question">
+              Choose a difficulty and start practice.
+            </div>
+
+            <input
+              id="practice-answer"
+              type="text"
+              placeholder="Type your answer..."
+              autocomplete="off"
+            />
+
+            <div class="answer-actions">
+              <button id="practice-check" class="primary-btn">Check</button>
+              <button id="practice-reveal" class="secondary-btn">Reveal</button>
+              <button id="practice-next" class="secondary-btn">Next</button>
+            </div>
+
+            <div id="practice-feedback" class="feedback"></div>
+          </div>
+
+          <div class="practice-stats-card">
+            <h3>Practice Stats</h3>
+            <p>
+              <strong>Correct:</strong> <span id="practice-correct">0</span>
+            </p>
+            <p><strong>Wrong:</strong> <span id="practice-wrong">0</span></p>
+            <p>
+              <strong>Accuracy:</strong> <span id="practice-accuracy">0%</span>
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="learn-tab" class="tab-panel">
-        <div class="placeholder-card">
-          <h2>Learn Hub</h2>
-          <p>
-            Add category guides, trivia tips, links to external learning
-            resources, or AI-powered explanations here.
-          </p>
+        <div class="panel-header">
+          <div>
+            <h2>Learn Hub</h2>
+            <p>Tips, resources, and guidance to improve your trivia skills.</p>
+          </div>
+        </div>
+
+        <div class="learn-grid">
+          <article class="learn-card">
+            <h3>How to Play Smarter</h3>
+            <ul>
+              <li>Start with easier-value clues to build momentum.</li>
+              <li>Use hints only when the clue value is worth it.</li>
+              <li>
+                Watch category patterns before committing to harder clues.
+              </li>
+            </ul>
+          </article>
+
+          <article class="learn-card">
+            <h3>Common Trivia Categories</h3>
+            <ul>
+              <li>History</li>
+              <li>Science</li>
+              <li>Literature</li>
+              <li>Pop Culture</li>
+              <li>Geography</li>
+            </ul>
+          </article>
+
+          <article class="learn-card">
+            <h3>External Learning Resources</h3>
+            <ul class="resource-list">
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Jeopardy!"
+                  target="_blank"
+                  >About Jeopardy</a
+                >
+              </li>
+              <li>
+                <a href="https://www.britannica.com/" target="_blank"
+                  >Britannica</a
+                >
+              </li>
+              <li>
+                <a href="https://www.nationalgeographic.com/" target="_blank"
+                  >National Geographic</a
+                >
+              </li>
+              <li>
+                <a href="https://www.khanacademy.org/" target="_blank"
+                  >Khan Academy</a
+                >
+              </li>
+            </ul>
+          </article>
+
+          <article class="learn-card">
+            <h3>Coming Soon</h3>
+            <p>
+              Future versions can add AI-powered explanations, category deep
+              dives, and post-game learning suggestions.
+            </p>
+          </article>
         </div>
       </section>
     </main>

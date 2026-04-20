@@ -249,6 +249,9 @@ function handleCheckAnswer() {
     return;
   }
 
+  $("#answer-input").val("");
+  setFeedback("");
+
   const isCorrect =
     userAnswer === correctAnswer ||
     correctAnswer.includes(userAnswer) ||
@@ -345,11 +348,9 @@ function handleClickOfActiveClue() {
 function unlockBoardAfterDelay(delay = 1400) {
   setTimeout(() => {
     activeClueMode = 0;
-    activeClue = null;
     hintUsed = false;
     $("#answer-input").val("");
     setFeedback("");
-    renderEmptyState();
 
     if (categories.length === 0) {
       isPlayButtonClickable = true;
@@ -365,4 +366,113 @@ function unlockBoardAfterDelay(delay = 1400) {
       );
     }
   }, delay);
+}
+
+let practiceClue = null;
+let practiceCorrect = 0;
+let practiceWrong = 0;
+
+$("#practice-start").on("click", startPractice);
+$("#practice-check").on("click", checkPracticeAnswer);
+$("#practice-reveal").on("click", revealPracticeAnswer);
+$("#practice-next").on("click", loadNextPracticeQuestion);
+
+function updatePracticeStats() {
+  const total = practiceCorrect + practiceWrong;
+  const accuracy =
+    total === 0 ? 0 : Math.round((practiceCorrect / total) * 100);
+
+  $("#practice-correct").text(practiceCorrect);
+  $("#practice-wrong").text(practiceWrong);
+  $("#practice-accuracy").text(`${accuracy}%`);
+}
+
+async function startPractice() {
+  practiceCorrect = 0;
+  practiceWrong = 0;
+  updatePracticeStats();
+  await loadNextPracticeQuestion();
+}
+
+async function loadNextPracticeQuestion() {
+  $("#practice-feedback").removeClass("correct wrong info hint").text("");
+  $("#practice-answer").val("");
+
+  const difficulty = $("#practice-difficulty").val();
+
+  let minValue = 400;
+  let maxValue = 800;
+
+  if (difficulty === "easy") {
+    minValue = 100;
+    maxValue = 400;
+  } else if (difficulty === "hard") {
+    minValue = 800;
+    maxValue = 2000;
+  }
+
+  try {
+    const categoryIds = await getCategoryIds();
+    const randomCategoryId =
+      categoryIds[Math.floor(Math.random() * categoryIds.length)];
+    const categoryData = await getCategoryData(randomCategoryId);
+
+    const matchingClues = categoryData.clues.filter(
+      (clue) => clue.value >= minValue && clue.value <= maxValue,
+    );
+
+    practiceClue = matchingClues[0] || categoryData.clues[0];
+
+    $("#practice-question").html(`
+      <div class="label">Practice Question</div>
+      <div>${practiceClue.question}</div>
+    `);
+  } catch (err) {
+    $("#practice-question").text("Unable to load practice question.");
+  }
+}
+
+function checkPracticeAnswer() {
+  if (!practiceClue) return;
+
+  const userAnswer = normalizeAnswer($("#practice-answer").val());
+  const correctAnswer = normalizeAnswer(practiceClue.answer);
+
+  if (!userAnswer) {
+    $("#practice-feedback")
+      .removeClass("correct wrong")
+      .addClass("info")
+      .text("Type an answer first.");
+    return;
+  }
+
+  const isCorrect =
+    userAnswer === correctAnswer ||
+    correctAnswer.includes(userAnswer) ||
+    userAnswer.includes(correctAnswer);
+
+  if (isCorrect) {
+    practiceCorrect++;
+    $("#practice-feedback")
+      .removeClass("wrong info")
+      .addClass("correct")
+      .text("Correct!");
+  } else {
+    practiceWrong++;
+    $("#practice-feedback")
+      .removeClass("correct info")
+      .addClass("wrong")
+      .text(`Not quite. Correct answer: ${practiceClue.answer}`);
+  }
+
+  updatePracticeStats();
+}
+
+function revealPracticeAnswer() {
+  if (!practiceClue) return;
+
+  $("#practice-feedback")
+    .removeClass("correct wrong")
+    .addClass("info")
+    .text(`Answer: ${practiceClue.answer}`);
 }
