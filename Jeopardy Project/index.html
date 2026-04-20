@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrainArcade</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div>
+          <h1>BrainArcade</h1>
+          <p>Play. Learn. Improve.</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <button class="tab-btn active" data-tab="jeopardy-tab">Jeopardy</button>
+        <button class="tab-btn" data-tab="practice-tab">Practice</button>
+        <button class="tab-btn" data-tab="learn-tab">Learn</button>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <section class="topbar">
+        <div class="stat-card">
+          <span class="stat-label">Score</span>
+          <span class="stat-value" id="score-value">$0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Answered</span>
+          <span class="stat-value" id="answered-value">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Streak</span>
+          <span class="stat-value" id="streak-value">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Best</span>
+          <span class="stat-value" id="best-value">$0</span>
+        </div>
+      </section>
+
+      <section id="jeopardy-tab" class="tab-panel active">
+        <div class="panel-header">
+          <div>
+            <h2>Jeopardy Arena</h2>
+            <p>Choose a clue, answer it, and build your streak.</p>
+          </div>
+          <div class="panel-actions">
+            <button id="play">Start the Game!</button>
+            <button id="read-clue" class="secondary-btn">🔊 Read</button>
+            <button id="clear-best" class="secondary-btn">Reset Best</button>
+          </div>
+        </div>
+
+        <div class="game-layout">
+          <section class="board-panel">
+            <table>
+              <thead>
+                <tr id="categories"></tr>
+              </thead>
+              <tbody>
+                <tr id="clues"></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <aside class="interaction-panel">
+            <div id="active-clue" class="active-clue">
+              <div class="empty-state">
+                <span class="empty-icon">🎯</span>
+                <p>Select a clue to begin.</p>
+              </div>
+            </div>
+
+            <div class="answer-box">
+              <label for="answer-input">Your Answer</label>
+              <input
+                id="answer-input"
+                type="text"
+                placeholder="Type your answer here..."
+                autocomplete="off"
+              />
+
+              <div class="answer-actions">
+                <button id="check-answer" class="primary-btn">
+                  Check Answer
+                </button>
+                <button id="hint-btn" class="secondary-btn">Hint (-50%)</button>
+                <button id="reveal-btn" class="secondary-btn">
+                  Reveal Answer
+                </button>
+              </div>
+
+              <div id="feedback" class="feedback"></div>
+            </div>
+
+            <div class="learn-panel">
+              <h3>Learn More</h3>
+              <p id="learn-copy">
+                After you answer, this panel can guide the user with context,
+                strategy, or a short explanation.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="practice-tab" class="tab-panel">
+        <div class="placeholder-card">
+          <h2>Practice Mode</h2>
+          <p>
+            This is where your next game mode will live. Great fit for your
+            other JS games or an Open Trivia training mode.
+          </p>
+        </div>
+      </section>
+
+      <section id="learn-tab" class="tab-panel">
+        <div class="placeholder-card">
+          <h2>Learn Hub</h2>
+          <p>
+            Add category guides, trivia tips, links to external learning
+            resources, or AI-powered explanations here.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        BrainArcade • A multi-game learning playground built with HTML, CSS, and
+        JavaScript.
+      </p>
+    </footer>
+
+    <div id="spinner" class="disabled">
+      <i class="fa fa-spin fa-spinner"></i>
+    </div>
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="https://unpkg.com/lodash"></script>
+    <script src="jeopardy.js"></script>
+  </body>
+</html>
