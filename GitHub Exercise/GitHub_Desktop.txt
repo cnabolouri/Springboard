@@ -1,0 +1,33 @@
+**Steps**
+    - Install GitHub Desktop
+        Download and install from the official website
+        Launch the application
+    - Configure User Settings
+        Set your name and email in GitHub Desktop preferences
+    - Initialize Repository
+        Create a new repository named GitAdventure
+        Open the repository folder on your computer
+    - Stage and Commit First File
+        Create journey.txt with initial content
+        Stage the file using the checkbox
+        Commit with a descriptive message
+    - Create and Delete a File
+        Create temp.txt and commit it
+        Delete the file from the folder
+        Commit the deletion in GitHub Desktop
+    - Rename and Update File
+        Rename journey.txt to adventure.txt
+        Modify its content
+        Stage and commit the changes
+    - Ignore Files with .gitignore
+        Create .gitignore and add *.log
+        Commit the .gitignore file
+        Create a .log file and verify it is ignored
+    - Make Additional Changes
+        Update adventure.txt with new content
+        Review changes in GitHub Desktop
+        Stage and commit the update
+    - View History and Restore
+        Use the History tab to review commits
+        Restore file content manually from a previous commit
+        Commit the restored version
