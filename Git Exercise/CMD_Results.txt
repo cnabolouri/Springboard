@@ -1,0 +1,124 @@
+git version 2.49.0.windows.1
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+user.name=Sina Bolouri
+user.email=cnabolouri@gmail.com
+safe.directory=/home/project
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../
+
+nothing added to commit but untracked files present (use "git add" to track)
+warning: in the working copy of 'Git Exercise/GitAdventure/journey.txt', LF will be replaced by CRLF the next time Git touches it
+[main 535e0ed] Add journey.txt with initial Git journey message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git Exercise/GitAdventure/journey.txt
+warning: in the working copy of 'Git Exercise/GitAdventure/temp.txt', LF will be replaced by CRLF the next time Git touches it
+[main 0ead203] Add temp.txt for deletion practice
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git Exercise/GitAdventure/temp.txt
+rm 'Git Exercise/GitAdventure/temp.txt'
+[main b17c782] Remove temp.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 Git Exercise/GitAdventure/temp.txt
+warning: in the working copy of 'Git Exercise/GitAdventure/adventure.txt', LF will be replaced by CRLF the next time Git touches it
+[main 974fb56] Rename journey.txt to adventure.txt and update content
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 Git Exercise/GitAdventure/adventure.txt
+ delete mode 100644 Git Exercise/GitAdventure/journey.txt
+warning: in the working copy of 'Git Exercise/GitAdventure/.gitignore', LF will be replaced by CRLF the next time Git touches it
+[main 02dd07d] Add .gitignore to ignore log files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git Exercise/GitAdventure/.gitignore
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../CMD_Git.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+ M adventure.txt
+?? ../CMD_Git.sh
+warning: in the working copy of 'Git Exercise/GitAdventure/adventure.txt', LF will be replaced by CRLF the next time Git touches it
+[main 052ba85] Expand adventure.txt with deeper Git exploration
+052ba85 (HEAD -> main) Expand adventure.txt with deeper Git exploration
+02dd07d Add .gitignore to ignore log files
+974fb56 Rename journey.txt to adventure.txt and update content
+b17c782 Remove temp.txt
+0ead203 Add temp.txt for deletion practice
+535e0ed Add journey.txt with initial Git journey message
+99d7ab5 (origin/main, origin/HEAD) Destructuring Ex
+65d45cc New exs
+565597d MFFFF_2
+b6e9b1a MFFFF
+1d9281e Space mission new version
+1d9da09 Space mission
+690183c P3
+4ad17fa Links
+602b2c9 Events
+cd058e2 DOM1
+521ca63 ps chngs
+26d520a problem solve
+22906f8 final P2s
+fbed290 P2-E7
+b20f33e P2-E6 n
+b7caa3f P2-E6
+19e175a P2-E4,E5
+:...skipping...
+052ba85 (HEAD -> main) Expand adventure.txt with deeper Git exploration
+02dd07d Add .gitignore to ignore log files
+974fb56 Rename journey.txt to adventure.txt and update content
+b17c782 Remove temp.txt
+0ead203 Add temp.txt for deletion practice
+535e0ed Add journey.txt with initial Git journey message
+99d7ab5 (origin/main, origin/HEAD) Destructuring Ex
+65d45cc New exs
+565597d MFFFF_2
+b6e9b1a MFFFF
+1d9281e Space mission new version
+1d9da09 Space mission
+690183c P3
+4ad17fa Links
+602b2c9 Events
+cd058e2 DOM1
+521ca63 ps chngs
+26d520a problem solve
+22906f8 final P2s
+fbed290 P2-E7
+b20f33e P2-E6 n
+b7caa3f P2-E6
+19e175a P2-E4,E5
+ef053de p2-e3 changes
+:
+052ba85 (HEAD -> main) Expand adventure.txt with deeper Git exploration
+02dd07d Add .gitignore to ignore log files
+974fb56 Rename journey.txt to adventure.txt and update content
+b17c782 Remove temp.txt
+0ead203 Add temp.txt for deletion practice
+535e0ed Add journey.txt with initial Git journey message
+99d7ab5 (origin/main, origin/HEAD) Destructuring Ex
+65d45cc New exs
+565597d MFFFF_2
+b6e9b1a MFFFF
+1d9281e Space mission new version
+1d9da09 Space mission
+690183c P3
+4ad17fa Links
+602b2c9 Events
+cd058e2 DOM1
+521ca63 ps chngs
+26d520a problem solve
+22906f8 final P2s
+fbed290 P2-E7
+b20f33e P2-E6 n
+b7caa3f P2-E6
+19e175a P2-E4,E5
+ef053de p2-e3 changes
+:
